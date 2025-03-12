@@ -1,0 +1,74 @@
+{
+    "central-scotland": {
+        "SNP": 45.3,
+        "Labour": 23.7,
+        "Conservatives": 18.3,
+        "Liberal Democrats": 1.9,
+        "Greens": 6,
+        "Alba": 1.6,
+        "Reform": 0.2
+    },
+    "glasgow": {
+        "SNP": 43.9,
+        "Labour": 24.3,
+        "Conservatives": 12.1,
+        "Liberal Democrats": 2,
+        "Greens": 11.8,
+        "Alba": 1.8,
+        "Reform": 0.2
+    },
+    "highlands-and-islands": {
+        "SNP": 40.4,
+        "Labour": 9.5,
+        "Conservatives": 25.4,
+        "Liberal Democrats": 11.2,
+        "Greens": 7.4,
+        "Alba": 1.6,
+        "Reform": 0.2
+    },
+    "lothian": {
+        "SNP": 35.9,
+        "Labour": 19.4,
+        "Conservatives": 19.9,
+        "Liberal Democrats": 7.2,
+        "Greens": 12.7,
+        "Alba": 1.6,
+        "Reform": 0.2
+    },
+    "mid-scotland-and-fife": {
+        "SNP": 39.8,
+        "Labour": 15.3,
+        "Conservatives": 25,
+        "Liberal Democrats": 7.4,
+        "Greens": 8.3,
+        "Alba": 1.7,
+        "Reform": 0.2
+    },
+    "north-east-scotland": {
+        "SNP": 40.9,
+        "Labour": 11.4,
+        "Conservatives": 30.6,
+        "Liberal Democrats": 5,
+        "Greens": 6.3,
+        "Alba": 2.3,
+        "Reform": 0.3
+    },
+    "south-scotland": {
+        "SNP": 37.6,
+        "Labour": 15.7,
+        "Conservatives": 33.5,
+        "Liberal Democrats": 3.4,
+        "Greens": 5.2,
+        "Alba": 1.1,
+        "Reform": 0.2
+    },
+    "west-scotland": {
+        "SNP": 40.4,
+        "Labour": 22.2,
+        "Conservatives": 21.9,
+        "Liberal Democrats": 3.6,
+        "Greens": 7.1,
+        "Alba": 1.6,
+        "Reform": 0
+    }
+}
