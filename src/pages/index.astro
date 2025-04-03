@@ -2,19 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
-import data from '../data/scotland_constituency_results_2021.json';
-import data from '../data/scotland_list_results_2021.json';
+import VoteForm from '../components/VoteForm.tsx';
 
 const explainer = `
-add explainer here
+Input your expected vote shares for all parties on both the List and the Constituency to see how many seats they’d win. Just make sure the numbers sum to 100%. 
+
+List seats are awarded after constituency seats to create a more proportional parliament.
 `;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Scotland Election Projections">
     <ContextAlert class="mb-4" />
-    <h1 class="mb-10">Devolved Election Projections</h1>
+    <h1 class="mb-10">Scotland Election Projections</h1>
     <Markdown content={explainer} class="text-lg mb-10" />
-    <p class="mb-8">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
-    </p>
+    <VoteForm client:load />
+    <p class="mb-8"></p>
 </Layout>

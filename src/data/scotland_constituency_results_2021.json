@@ -1,9 +1,8 @@
 {
     "central-scotland": {
         "name": "Central Scotland",
-        "constituencies": [
-            {
-                "name": "Airdrie and Shotts",
+        "constituencies": {
+            "Airdrie and Shotts": {
                 "SNP": 50.6,
                 "Labour": 33.4,
                 "Conservatives": 13.9,
@@ -11,8 +10,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Coatbridge and Chryston",
+            "Coatbridge and Chryston": {
                 "SNP": 57.5,
                 "Labour": 31.1,
                 "Conservatives": 8.5,
@@ -20,8 +18,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Cumbernauld and Kilsyth",
+            "Cumbernauld and Kilsyth": {
                 "SNP": 58.6,
                 "Labour": 29.2,
                 "Conservatives": 10.1,
@@ -29,8 +26,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "East Kilbride",
+            "East Kilbride": {
                 "SNP": 51.9,
                 "Labour": 30.6,
                 "Conservatives": 14.5,
@@ -38,8 +34,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Falkirk East",
+            "Falkirk East": {
                 "SNP": 47.4,
                 "Labour": 27.9,
                 "Conservatives": 19.6,
@@ -47,8 +42,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Falkirk West",
+            "Falkirk West": {
                 "SNP": 54.3,
                 "Labour": 24.4,
                 "Conservatives": 18.5,
@@ -56,8 +50,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Hamilton, Larkhall and Stonehouse",
+            "Hamilton, Larkhall and Stonehouse": {
                 "SNP": 46.2,
                 "Labour": 33.6,
                 "Conservatives": 17.5,
@@ -65,8 +58,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Motherwell and Wishaw",
+            "Motherwell and Wishaw": {
                 "SNP": 53.2,
                 "Labour": 30.3,
                 "Conservatives": 13.1,
@@ -74,8 +66,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Uddingston and Bellshill",
+            "Uddingston and Bellshill": {
                 "SNP": 49.9,
                 "Labour": 35.1,
                 "Conservatives": 12.7,
@@ -83,13 +74,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "glasgow": {
         "name": "Glasgow",
-        "constituencies": [
-            {
-                "name": "Glasgow Anniesland",
+        "constituencies": {
+            "Glasgow Anniesland": {
                 "SNP": 52.8,
                 "Labour": 32.9,
                 "Conservatives": 11.1,
@@ -97,8 +87,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Cathcart",
+            "Glasgow Cathcart": {
                 "SNP": 57,
                 "Labour": 29.7,
                 "Conservatives": 10.6,
@@ -106,8 +95,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Kelvin",
+            "Glasgow Kelvin": {
                 "SNP": 40.3,
                 "Labour": 23.9,
                 "Conservatives": 7.9,
@@ -115,8 +103,7 @@
                 "Greens": 25.2,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Maryhill and Springburn",
+            "Glasgow Maryhill and Springburn": {
                 "SNP": 59,
                 "Labour": 30.5,
                 "Conservatives": 8,
@@ -124,8 +111,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Pollok",
+            "Glasgow Pollok": {
                 "SNP": 53.7,
                 "Labour": 32.7,
                 "Conservatives": 5.5,
@@ -133,8 +119,7 @@
                 "Greens": 4.9,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Provan",
+            "Glasgow Provan": {
                 "SNP": 52.9,
                 "Labour": 28.9,
                 "Conservatives": 8.9,
@@ -142,8 +127,7 @@
                 "Greens": 7.9,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Shettleston",
+            "Glasgow Shettleston": {
                 "SNP": 54.4,
                 "Labour": 29.4,
                 "Conservatives": 13.8,
@@ -151,8 +135,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Glasgow Southside",
+            "Glasgow Southside": {
                 "SNP": 60.2,
                 "Labour": 31.3,
                 "Conservatives": 5.5,
@@ -160,8 +143,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Rutherglen",
+            "Rutherglen": {
                 "SNP": 50.5,
                 "Labour": 37.6,
                 "Conservatives": 9.1,
@@ -169,13 +151,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "highlands-and-islands": {
         "name": "Highlands and Islands",
-        "constituencies": [
-            {
-                "name": "Argyll and Bute",
+        "constituencies": {
+            "Argyll and Bute": {
                 "SNP": 49.5,
                 "Labour": 7.3,
                 "Conservatives": 22.8,
@@ -183,8 +164,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Caithness, Sutherland and Ross",
+            "Caithness, Sutherland and Ross": {
                 "SNP": 43.1,
                 "Labour": 5.5,
                 "Conservatives": 14,
@@ -192,8 +172,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Inverness and Nairn",
+            "Inverness and Nairn": {
                 "SNP": 47.7,
                 "Labour": 11.7,
                 "Conservatives": 27.7,
@@ -201,8 +180,7 @@
                 "Greens": 5.8,
                 "Reform": 0
             },
-            {
-                "name": "Moray",
+            "Moray": {
                 "SNP": 48.6,
                 "Labour": 7.2,
                 "Conservatives": 40.9,
@@ -210,8 +188,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Na h-Eileanan an Iar",
+            "Na h-Eileanan an Iar": {
                 "SNP": 51.4,
                 "Labour": 27.7,
                 "Conservatives": 14.6,
@@ -219,8 +196,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Orkney",
+            "Orkney": {
                 "SNP": 29.1,
                 "Labour": 2.5,
                 "Conservatives": 6,
@@ -228,8 +204,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Shetland",
+            "Shetland": {
                 "SNP": 41.9,
                 "Labour": 3.6,
                 "Conservatives": 4.2,
@@ -237,8 +212,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Skye, Lochaber and Badenoch",
+            "Skye, Lochaber and Badenoch": {
                 "SNP": 56.1,
                 "Labour": 8.9,
                 "Conservatives": 19.3,
@@ -246,13 +220,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "lothian": {
         "name": "Lothian",
-        "constituencies": [
-            {
-                "name": "Almond Valley",
+        "constituencies": {
+            "Almond Valley": {
                 "SNP": 54.3,
                 "Labour": 25.2,
                 "Conservatives": 16.6,
@@ -260,8 +233,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Central",
+            "Edinburgh Central": {
                 "SNP": 39,
                 "Labour": 16.4,
                 "Conservatives": 27.7,
@@ -269,8 +241,7 @@
                 "Greens": 9.4,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Eastern",
+            "Edinburgh Eastern": {
                 "SNP": 52.4,
                 "Labour": 29,
                 "Conservatives": 13.8,
@@ -278,8 +249,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Northern and Leith",
+            "Edinburgh Northern and Leith": {
                 "SNP": 47.9,
                 "Labour": 23.2,
                 "Conservatives": 10.8,
@@ -287,8 +257,7 @@
                 "Greens": 13.1,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Pentlands",
+            "Edinburgh Pentlands": {
                 "SNP": 42.4,
                 "Labour": 18.3,
                 "Conservatives": 32.3,
@@ -296,8 +265,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Southern",
+            "Edinburgh Southern": {
                 "SNP": 37,
                 "Labour": 45.9,
                 "Conservatives": 11.6,
@@ -305,8 +273,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Edinburgh Western",
+            "Edinburgh Western": {
                 "SNP": 33.5,
                 "Labour": 5.4,
                 "Conservatives": 6,
@@ -314,8 +281,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Linlithgow",
+            "Linlithgow": {
                 "SNP": 48.4,
                 "Labour": 26.9,
                 "Conservatives": 20.2,
@@ -323,8 +289,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Midlothian North and Musselburgh",
+            "Midlothian North and Musselburgh": {
                 "SNP": 49.7,
                 "Labour": 31.1,
                 "Conservatives": 15.3,
@@ -332,13 +297,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "mid-scotland-and-fife": {
         "name": "Mid Scotland and Fife",
-        "constituencies": [
-            {
-                "name": "Clackmannanshire and Dunblane",
+        "constituencies": {
+            "Clackmannanshire and Dunblane": {
                 "SNP": 47.2,
                 "Labour": 23.7,
                 "Conservatives": 25.6,
@@ -346,8 +310,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Cowdenbeath",
+            "Cowdenbeath": {
                 "SNP": 48.3,
                 "Labour": 30.7,
                 "Conservatives": 13.9,
@@ -355,8 +318,7 @@
                 "Greens": 3.9,
                 "Reform": 0
             },
-            {
-                "name": "Dunfermline",
+            "Dunfermline": {
                 "SNP": 49,
                 "Labour": 27.8,
                 "Conservatives": 15.4,
@@ -364,8 +326,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Kirkcaldy",
+            "Kirkcaldy": {
                 "SNP": 52.4,
                 "Labour": 30.1,
                 "Conservatives": 13.9,
@@ -373,8 +334,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Mid Fife and Glenrothes",
+            "Mid Fife and Glenrothes": {
                 "SNP": 55.4,
                 "Labour": 24.1,
                 "Conservatives": 13.8,
@@ -382,8 +342,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "North East Fife",
+            "North East Fife": {
                 "SNP": 36.6,
                 "Labour": 2.6,
                 "Conservatives": 5.8,
@@ -391,8 +350,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Perthshire North",
+            "Perthshire North": {
                 "SNP": 49.5,
                 "Labour": 5.8,
                 "Conservatives": 39.4,
@@ -400,8 +358,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Perthshire South and Kinross-shire",
+            "Perthshire South and Kinross-shire": {
                 "SNP": 45.7,
                 "Labour": 6.7,
                 "Conservatives": 41.2,
@@ -409,8 +366,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Stirling",
+            "Stirling": {
                 "SNP": 48.6,
                 "Labour": 16,
                 "Conservatives": 31.8,
@@ -418,13 +374,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "north-east-scotland": {
         "name": "North East Scotland",
-        "constituencies": [
-            {
-                "name": "Aberdeen Central",
+        "constituencies": {
+            "Aberdeen Central": {
                 "SNP": 44.9,
                 "Labour": 19.9,
                 "Conservatives": 24.1,
@@ -432,8 +387,7 @@
                 "Greens": 6.6,
                 "Reform": 0
             },
-            {
-                "name": "Aberdeen Donside",
+            "Aberdeen Donside": {
                 "SNP": 51.6,
                 "Labour": 15.3,
                 "Conservatives": 26.4,
@@ -441,8 +395,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Aberdeen South and North Kincardine",
+            "Aberdeen South and North Kincardine": {
                 "SNP": 42.3,
                 "Labour": 11.5,
                 "Conservatives": 38,
@@ -450,8 +403,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Aberdeenshire East",
+            "Aberdeenshire East": {
                 "SNP": 44.6,
                 "Labour": 7.1,
                 "Conservatives": 40,
@@ -459,8 +411,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Aberdeenshire West",
+            "Aberdeenshire West": {
                 "SNP": 39.1,
                 "Labour": 5.7,
                 "Conservatives": 47.2,
@@ -468,8 +419,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Angus North and Mearns",
+            "Angus North and Mearns": {
                 "SNP": 48.6,
                 "Labour": 7.6,
                 "Conservatives": 38.7,
@@ -477,8 +427,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Angus South",
+            "Angus South": {
                 "SNP": 50.7,
                 "Labour": 9.4,
                 "Conservatives": 34.8,
@@ -486,8 +435,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Banffshire and Buchan Coast",
+            "Banffshire and Buchan Coast": {
                 "SNP": 45.2,
                 "Labour": 6.6,
                 "Conservatives": 42.9,
@@ -495,8 +443,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Dundee City East",
+            "Dundee City East": {
                 "SNP": 59.2,
                 "Labour": 18.1,
                 "Conservatives": 17.3,
@@ -504,8 +451,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Dundee City West",
+            "Dundee City West": {
                 "SNP": 61.6,
                 "Labour": 21.5,
                 "Conservatives": 10.3,
@@ -513,13 +459,12 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     },
     "south-of-scotland": {
         "name": "South of Scotland",
-        "constituencies": [
-            {
-                "name": "Ayr",
+        "constituencies": {
+            "Ayr": {
                 "SNP": 43.5,
                 "Labour": 11,
                 "Conservatives": 43.1,
@@ -527,8 +472,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Carrick, Cumnock and Doon Valley",
+            "Carrick, Cumnock and Doon Valley": {
                 "SNP": 42.8,
                 "Labour": 24.2,
                 "Conservatives": 30.6,
@@ -536,8 +480,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Clydesdale",
+            "Clydesdale": {
                 "SNP": 43.2,
                 "Labour": 22,
                 "Conservatives": 32,
@@ -545,8 +488,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Dumfriesshire",
+            "Dumfriesshire": {
                 "SNP": 37.7,
                 "Labour": 11.4,
                 "Conservatives": 47.7,
@@ -554,8 +496,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "East Lothian",
+            "East Lothian": {
                 "SNP": 39.2,
                 "Labour": 36.7,
                 "Conservatives": 20.7,
@@ -563,8 +504,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Ettrick, Roxburgh and Berwickshire",
+            "Ettrick, Roxburgh and Berwickshire": {
                 "SNP": 32.5,
                 "Labour": 5.7,
                 "Conservatives": 51.5,
@@ -572,8 +512,7 @@
                 "Greens": 3,
                 "Reform": 0
             },
-            {
-                "name": "Galloway and West Dumfries",
+            "Galloway and West Dumfries": {
                 "SNP": 39.9,
                 "Labour": 7.9,
                 "Conservatives": 47,
@@ -581,8 +520,7 @@
                 "Greens": 2.6,
                 "Reform": 0
             },
-            {
-                "name": "Kilmarnock and Irvine Valley",
+            "Kilmarnock and Irvine Valley": {
                 "SNP": 52.7,
                 "Labour": 24,
                 "Conservatives": 20.4,
@@ -590,8 +528,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Midlothian South, Tweeddale and Lauderdale",
+            "Midlothian South, Tweeddale and Lauderdale": {
                 "SNP": 46,
                 "Labour": 12.6,
                 "Conservatives": 30.2,
@@ -599,13 +536,12 @@
                 "Greens": 5,
                 "Reform": 0
             }
-        ]
+        }
     },
     "west-scotland": {
         "name": "West Scotland",
-        "constituencies": [
-            {
-                "name": "Clydebank and Milngavie",
+        "constituencies": {
+            "Clydebank and Milngavie": {
                 "SNP": 47.2,
                 "Labour": 33.2,
                 "Conservatives": 11,
@@ -613,8 +549,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Cunninghame North",
+            "Cunninghame North": {
                 "SNP": 49,
                 "Labour": 20.3,
                 "Conservatives": 28.1,
@@ -622,8 +557,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Cunninghame South",
+            "Cunninghame South": {
                 "SNP": 50.5,
                 "Labour": 22,
                 "Conservatives": 24.1,
@@ -631,8 +565,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Dumbarton",
+            "Dumbarton": {
                 "SNP": 42.5,
                 "Labour": 46.3,
                 "Conservatives": 8.3,
@@ -640,8 +573,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Eastwood",
+            "Eastwood": {
                 "SNP": 36.8,
                 "Labour": 15.8,
                 "Conservatives": 41.9,
@@ -649,8 +581,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Greenock and Inverclyde",
+            "Greenock and Inverclyde": {
                 "SNP": 54.2,
                 "Labour": 31.7,
                 "Conservatives": 9.1,
@@ -658,8 +589,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Paisley",
+            "Paisley": {
                 "SNP": 50,
                 "Labour": 32.7,
                 "Conservatives": 9.6,
@@ -667,8 +597,7 @@
                 "Greens": 4.5,
                 "Reform": 0
             },
-            {
-                "name": "Renfrewshire North and West",
+            "Renfrewshire North and West": {
                 "SNP": 46.4,
                 "Labour": 27.2,
                 "Conservatives": 22.9,
@@ -676,8 +605,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Renfrewshire South",
+            "Renfrewshire South": {
                 "SNP": 50.5,
                 "Labour": 30,
                 "Conservatives": 14.8,
@@ -685,8 +613,7 @@
                 "Greens": 0,
                 "Reform": 0
             },
-            {
-                "name": "Strathkelvin and Bearsden",
+            "Strathkelvin and Bearsden": {
                 "SNP": 45.5,
                 "Labour": 18.4,
                 "Conservatives": 20.7,
@@ -694,6 +621,6 @@
                 "Greens": 0,
                 "Reform": 0
             }
-        ]
+        }
     }
 }
