@@ -11,3 +11,11 @@ export type BlobProps = {
     svgPath: string;
     parameters: BlobParameterProps;
 };
+
+declare global {
+    interface Window {
+        parliamentChart: any;
+    }
+}
+
+export { };

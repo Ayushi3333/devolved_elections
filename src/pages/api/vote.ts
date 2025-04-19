@@ -25,12 +25,34 @@ export const POST: APIRoute = async ({ request }) => {
   const albaList = data.get("Alba List");
   const reformList = data.get("Reform List");
 
+  // Combine user input into key-value pairs
+  const userInputConst = {
+    SNP: snpConst,
+    Conservatives: consConst,
+    Labour: labourConst,
+    "Liberal Democrats": libdemConst,
+    Greens: greensConst,
+    Reform: reformConst,
+    Alba: albaConst
+  };
+
+  const userInputList = {
+    SNP: snpList,
+    Conservatives: consList,
+    Labour: labourList,
+    "Liberal Democrats": libdemList,
+    Greens: greensList,
+    Reform: reformList,
+    Alba: albaList
+  };
+
   // not user input
   const snpSwing = Number(snpConst) / data_overall_const["parties"]["SNP"];
   const labourSwing = Number(labourConst) / data_overall_const["parties"]["Labour"];
   const consSwing = Number(consConst) / data_overall_const["parties"]["Conservatives"];
   const libdemSwing = Number(libdemConst) / data_overall_const["parties"]["Liberal Democrats"];
   const greensSplit = Number(greensConst) / Number(greensList);
+  const albaSplit = Number(albaConst) / Number(albaList);
 
   const snpListSwing = Number(snpList) / data_overall_list["parties"]["SNP"];
   const labourListSwing = Number(labourList) / data_overall_list["parties"]["Labour"];
@@ -83,14 +105,18 @@ export const POST: APIRoute = async ({ request }) => {
     })
   );
 
-  // Find reform vote share by subtracting the total votes from 100 and multiplying by 0.9
+  const reformListRatio = (
+    Number(albaList) + Number(greensList) + Number(reformList)
+  ) * Number(reformList);
+
+  console.log("Reform List Ratio: ", reformListRatio);
   const reformRegionalProj = Object.fromEntries(
     Object.entries(summedVotesByRegion).map(([region, totalVotes]) => [
       region,
-      (100 - totalVotes) * 0.9 // Subtract the total result from 100 to get the remaining percentage
+      (100 - totalVotes) * reformListRatio // Subtract the total result from 100 to get the remaining percentage
     ])
   );
-
+  console.log("Reform Regional Projection: ", reformRegionalProj);
   const greensVoteShare = Object.fromEntries(
     Object.entries(data_list).map(([region, parties]) => {
       // Get Greens' vote share only
@@ -106,20 +132,36 @@ export const POST: APIRoute = async ({ request }) => {
     }).filter(Boolean) // Remove null entries
   );
 
+  const albaVoteShare = Object.fromEntries(
+    Object.entries(data_list).map(([region, parties]) => {
+      // Get Alba's vote share only
+      const albaVotes = parties["Alba"];
+
+      // If Alba exist in this region, apply the multipliers
+      if (albaVotes !== undefined) {
+        return [region, { Alba: albaVotes * albaListSwing * albaSplit }];
+      }
+
+      // If Alba are not present, return nothing
+      return null;
+    }).filter(Boolean) // Remove null entries
+  );
 
   const regionalRatios = Object.fromEntries(
     Object.entries(reformRegionalProj).map(([region, reformVotes]) => {
       // Get the corresponding votes for Greens in the same region
       const greensVotes = greensVoteShare[region] || 0; // Default to 0 if no data for that region
+      const albaVotes = albaVoteShare[region] || 0; // Default to 0 if no data for that region
 
       // Calculate the total of Reform and Greens votes for that region
-      const totalVotes = reformVotes + greensVotes;
+      const totalVotes = reformVotes + greensVotes + albaVotes;
 
       // Divide the Reform vote share by the total (Reform + Greens)
       const reformRatio = totalVotes > 0 ? (reformVotes / totalVotes) : 0;
       const greensRatio = totalVotes > 0 ? (greensVotes / totalVotes) : 0;
+      const albaRatio = totalVotes > 0 ? (albaVotes / totalVotes) : 0;
 
-      return [region, { reformRatio, greensRatio }];
+      return [region, { reformRatio, greensRatio, albaRatio }];
     })
   );
 
@@ -139,18 +181,19 @@ export const POST: APIRoute = async ({ request }) => {
         .map(([party, vote]) => [party, vote * swingFactors[party]]) // Apply swing factor
     );
 
-    // For constituencies with Green vote share > 0, calculate using the formula for Reform
+    const regionRatios = regionalRatios[findRegionByConstituency(name)];
+    const leftover = 100 - (votes["SNP"] + votes["Labour"] + votes["Conservatives"] + votes["Liberal Democrats"]);
+
+    // For constituencies with Green vote share > 0, calculate using the formula for Reform and Alba
     if (votes["Greens"] > 0) {
-      const totalVotes = Object.values(voteShares).reduce((sum, share) => sum + share, 0);
-      const reformVoteShare = (100 - totalVotes) * 0.9; // Reform vote share formula
-      voteShares["Reform"] = reformVoteShare; // Assign the computed value to Reform
+      // Assign the computed value to Reform and Alba
+      voteShares["Reform"] = leftover * regionRatios.reformRatio;
+      voteShares["Alba"] = leftover * regionRatios.albaRatio;
     } else {
       if (regionalRatios[findRegionByConstituency(name)]) {
-        const regionRatios = regionalRatios[findRegionByConstituency(name)];
-
-        const leftover = 100 - (votes["SNP"] + votes["Labour"] + votes["Conservatives"] + votes["Liberal Democrats"]);
         voteShares["Reform"] = leftover * regionRatios.reformRatio;
         voteShares["Greens"] = leftover * regionRatios.greensRatio;
+        voteShares["Alba"] = leftover * regionRatios.albaRatio;
       }
     }
 
@@ -160,14 +203,15 @@ export const POST: APIRoute = async ({ request }) => {
   // Compute results for all constituencies and track the seats won by each party
   const seatCount = {
     SNP: 0,
-    Labour: 0,
     Conservatives: 0,
+    Labour: 0,
     "Liberal Democrats": 0,
     Greens: 0,
     Reform: 0,
+    Alba: 0
   };
 
-  const results = allConstituencies.map(({ name, votes }) => {
+  const constResults = allConstituencies.map(({ name, votes }) => {
     const consVoteShares = calculateVoteShares(name, votes);
     const winningParty = Object.keys(consVoteShares).reduce((maxParty, party) =>
       consVoteShares[party] > consVoteShares[maxParty] ? party : maxParty
@@ -179,7 +223,7 @@ export const POST: APIRoute = async ({ request }) => {
   });
 
   // Count the number of wins by party in each region
-  const partyWinsByRegion = results.reduce((acc, { region, winningParty }) => {
+  const partyWinsByRegion = constResults.reduce((acc, { region, winningParty }) => {
     if (!acc[region]) {
       acc[region] = {}; // Create region if it doesn’t exist
     }
@@ -214,6 +258,7 @@ export const POST: APIRoute = async ({ request }) => {
     })
   );
 
+  ////// LIST STARTS HERE /////////////
   const adjustedPartyShares = Object.fromEntries(
     Object.entries(updatedParties).map(([region, partyShares]) => {
       const partyWins = partyWinsByRegion[region] || {};
@@ -316,7 +361,7 @@ export const POST: APIRoute = async ({ request }) => {
       ];
     })
   );
-  console.log("Updated Shares Round Four", updatedSharesRoundFour);
+
   // Round 5 - Calculate adjusted party shares again
   const adjustedSharesRoundFive = Object.fromEntries(
     Object.entries(updatedParties).map(([region, partyShares]) => {
@@ -467,14 +512,22 @@ export const POST: APIRoute = async ({ request }) => {
   }, {});
 
   // Subtract 8 from each party's total
-  const finalPartyShares = Object.fromEntries(
+  const finalPartySeats = Object.fromEntries(
     Object.entries(calculateListPartyShares).map(([party, total]) => [
       party,
       total - 8
     ])
   );
 
-  return new Response(JSON.stringify({ seatCount, finalPartyShares }), {
+  // Subtract seatCount from finalPartySeats to get the list seat count for each party
+  const listSeatCount = Object.fromEntries(
+    Object.entries(finalPartySeats).map(([party, seats]) => [
+      party,
+      seats - (seatCount[party] || 0),
+    ])
+  );
+
+  return new Response(JSON.stringify({ userInputConst, userInputList, seatCount, listSeatCount, finalPartySeats, constResults }), {
     headers: { 'Content-Type': 'application/json' }
   });
 };

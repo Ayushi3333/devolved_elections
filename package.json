@@ -20,6 +20,8 @@
     "@types/react-dom": "^19.0.4",
     "astro": "^4.16.18",
     "blobshape": "^1.0.0",
+    "d3": "^7.9.0",
+    "d3-parliament-chart": "^0.0.6",
     "marked": "^13.0.0",
     "marked-shiki": "^1.1.0",
     "react": "^19.0.0",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@types/blobshape": "^1.0.3",
+    "@types/d3": "^7.4.3",
     "@types/node": "^20.12.7",
     "daisyui": "^4.10.2"
   }

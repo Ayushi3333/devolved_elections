@@ -1,0 +1,19 @@
+.flex {
+   justify-content: space-between; 
+}
+
+
+.snp { background-color: #FDF38E; }
+.conservatives {  background-color:  #0087DC; }
+.labour {  background-color:   #E4003B; }
+.greens {  background-color:   #00B140; }
+.liberaldemocrats {  background-color:  #FAA61A; }
+.alba {  background-color:  #005EB8; }
+.reform {  background-color:  #12B6CF; }
+
+.scotland-form { 
+   background-color: #c2c2f2;
+   border: 2px solid  #800080;
+   border-radius: 15px;
+   padding: 20px;
+}
